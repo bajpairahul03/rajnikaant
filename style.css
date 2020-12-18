@@ -1,0 +1,210 @@
+#title{
+    color: red;
+    border: 5px solid blue;
+    margin: 10px 20px 30px 40px;
+    padding: 10px 20px 20px 40px;
+    text-align: center;
+    text-shadow: 4px 4px 5px rgb(129, 90, 90);
+}
+
+nav{
+    background-color: skyblue;
+    text-align: center;
+}
+.nav-wrapper{
+    background-color:rgb(45, 108, 133);
+    line-height: 2;
+    
+}
+nav a{
+    text-decoration-line: none;
+   
+}
+nav ul{
+    list-style-type: none;
+}
+nav li{
+    display: inline-block;
+    margin: 20px 30px;
+}
+img{
+    border-radius: 50%;
+    box-shadow: 8px 8px 20px 3px rgb(71, 66, 66) ;
+}
+.box{
+   width: 250px;
+    height: 250px;
+    border: 2px solid red;
+    background-color:blue;
+    margin: 10px;
+}
+.flex{
+    margin: 30px;
+    border: 3px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center;
+  
+}
+.contact-box{
+    display: flex;
+    justify-content: center;
+    
+}
+.row{
+    margin: 30px;
+    
+}
+.input-field{
+    margin: 20px;
+}
+@keyframes fadeMe{
+    0%{
+        opacity: 1;
+    }
+    90%{
+        transform: rotate(360deg);
+    }
+    100%{
+        opacity: 0;
+    }
+    
+}
+#box1{
+    animation-name: fadeMe;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+
+}
+@keyframes rotation{
+    0%{
+        transform: rotate(90deg);
+
+    }
+    50%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+#box2{
+    animation-name: rotation;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background-image: linear-gradient(red,blue,orange,pink)
+    
+}
+@keyframes getBigger{
+    0%{
+        transform: scale(0);
+    }
+    25%{
+        background-image: radial-gradient(circle,grey,blue,red,pink);
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    
+    }
+    75%{
+        transform: scale(0.5);
+        border-radius: 50%;
+        background-color:rgb(21, 21, 34);
+    }
+    100%{
+        transform: scale(0);
+    }
+}
+#box3{
+    animation: getBigger 7s infinite;
+}
+@keyframes moveBox{
+    0%{
+        left: 0px;
+        top:0px;
+    }
+    25%{
+        left: 100px;
+        top:0px;
+    }
+    50%{
+        left: 100px;
+        top:100px;
+    }
+    75%{
+        left: 100px;
+        top:200px;
+    }
+    100%{
+        left: 0px;
+        top:0px;
+    }
+}
+#box4{
+    position: relative;
+    animation-name: moveBox;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    background-image: linear-gradient(red,blue,orange,pink)
+}
+
+   /* 
+}*/
+#box4{
+    animation: moveBox 7s infinite;
+}
+form input,textarea,button{
+    display: block;
+    margin: 30px;
+}
+.wrapper {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5, [col] 100px ) ;
+    grid-template-rows: repeat(3, [row] auto  );
+    background-color: #fff;
+    color: #444;
+  }
+
+  .Box {
+    background-color: #444;
+    color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 150%;
+    z-index:10;
+
+  }
+
+  .a {
+    grid-column: col / span  2;
+    grid-row: row ;
+  }
+  .b {
+    grid-column: col 3 / span  3 ;
+    grid-row: row ;
+  }
+  .c {
+    grid-column: col ;
+    grid-row: row 2 ;
+  }
+  .d {
+    grid-column: col 2 / span  3 ;
+    grid-row: row 2 ;
+  }
+
+  .e {
+    grid-column: col / span  5;
+    grid-row: row 3;
+  }
+
+  .f {
+    grid-column: col 3 / span 3;
+    grid-row: row 2  ;
+    background-color: rgba(49,121,207, 0.5);
+    z-index: 20;
+  }
